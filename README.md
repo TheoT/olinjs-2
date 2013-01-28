@@ -30,8 +30,7 @@ http.createServer(function(request, response) {
 }).listen(8888);
 ```
 
-Let's write the equivalent code in Express. First, run `git clone https://github.com/olinjs/olinjs-2.git` as in the last
-lesson to clone this repository. Next, in the `olinjs-2/` folder, run the command `npm install`. (If this triggers lots of
+Let's write the equivalent code in Express. First, fork the repository to your account as we did in the last room. Then `git clone https://github.com/<YOUR GITHUB USERNAME>/olinjs-2.git` as in the last lesson to clone this repository. Next, in the `olinjs-2/` folder, run the command `npm install`. (If this triggers lots of
 lines with errors, run `sudo npm install` instead, or send us an email).
 
 Next, create a file named `app.js` in that folder and paste in the following:
@@ -89,7 +88,7 @@ Before we talk about routing, let's talk a bit about clients vs servers. For our
 
 Routing is the process of serving up different pages for different urls. When you go to www.mycoolsite.com/ your computer goes out on the internet and asks mycoolsite's server for a page. Mycoolsite's server then sees that request and sends back information to your computer in the form of html. This html is then rendered on your browser.
 
-If you go to www.mycoolsite.com**/** mycoolsite's servers obviously can't send you the same data it sent www.mycoolsite.com**/olin**. So mycoolsite's servers needs to differentiate ```/``` from ```/olin```. This process is known as routing.
+If you go to www.mycoolsite.com/ mycoolsite's servers obviously can't send you the same data it sent www.mycoolsite.com/olin. So mycoolsite's servers needs to differentiate ```/``` from ```/olin```. This process is known as routing.
 
 In the Node beginner book, we did routing through something like 
 
@@ -217,7 +216,7 @@ switched to db test
 > db.users.find()
 { "_id" : ObjectId("51007865e481634f390b162f"), "name" : "alice" }
 > db.users.insert({'name': 'bob', 'grade': 'A', 'assignments':[{1: 'A', 2: 'B'}]})
-> db.items.find()
+> db.users.find()
 { "_id" : ObjectId("51007865e481634f390b162f"), "name" : "alice" }
 { "_id" : ObjectId("510078bee481634f390b1630"), "name" : "bob", "grade" : "A", 
   "assignments" : [ { "1" : "A", "2" : "B" } ] }
